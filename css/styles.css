@@ -254,7 +254,7 @@ h3 {
 .about_intro {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;            
     text-align: center;
     margin-right: 50px;
 }
@@ -304,6 +304,11 @@ h3 {
 }
 .text_left {
     font-size: 25px;
+}
+.section_about {
+    min-height: auto;
+    margin-bottom: 10px;
+
 }
 
 }
