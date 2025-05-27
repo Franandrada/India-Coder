@@ -404,7 +404,7 @@ h3 {
 }
 
 
-/* seccion servicios */
+/* ---------- seccion servicios -------------- */
 
 
 .servicios {
@@ -509,7 +509,7 @@ h3 {
 }
 
 
-/* FAQ */
+/* --------------- FAQ -----------------*/
 
 .section_faq {
     min-height: 50vw;
@@ -620,7 +620,7 @@ button:hover {
 }
 
 
-/* footer */ 
+/* -------------------- footer  ------------ */ 
 
 
 footer {
@@ -690,7 +690,7 @@ footer {
 }
 
 
-/* Page Contacto */ 
+/* -------------- Page Contacto ------------- */ 
 
 /* form */
 
@@ -755,7 +755,7 @@ span {
 }
 
 
-/* text contact */
+/*--------- text contact  --------------- */
 
 .section_contact {
     display: flex;
@@ -830,7 +830,7 @@ span {
     padding: 8px;
 }
 
-/* PROYECTOS PAGE */ 
+/* -----------PROYECTOS PAGE-------------- */ 
 
 /* GRIDS EN PAGE PROYECTOS */
 
@@ -908,7 +908,7 @@ span {
 }
 
 
-/* PAGE Servicios */
+/* ----------PAGE Servicios ---------- */
 
 .servicios_container {
     display: flex;
@@ -982,7 +982,7 @@ span {
 }
 
 
-/*   ----- PAGE NOSOTROS -------*/
+/*   ---------- PAGE NOSOTROS -------*/
 
 .nosotros_container_img {
     position: relative;
@@ -1134,12 +1134,16 @@ span {
 }
 
 
-.miembro {
+.miembro__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
     font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    transition: border-bottom 0.8s ease-in-out;
+    border-bottom: 2px solid transparent;
 
 }
 
@@ -1152,5 +1156,87 @@ span {
     color: #555;
     font-style: italic;
 }
+
+
+.imagen-hover {
+    display: none;
+    position: absolute;
+    top: -150%;
+    left: 30%;
+    width: 200px;
+    height: 300px;
+    z-index: 10;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.miembro__info:hover {
+    border-bottom: 2px solid black;
+}
+
+.miembro__info:hover .imagen-hover{
+    display: block;
+}
+
+
+/*    Media query page Nosotros */ 
+
+
+@media screen and (max-width:780px){
+    .nosotros_texto-superior, .nosotros_texto-medio, .nosotros_texto-inferior{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .contenedor_total {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+
+@media screen and (max-width:590px){
+    .nosotros_texto-superior, .nosotros_texto-medio, .nosotros_texto-inferior {
+        font-size: 1rem;
+        margin: 0;
+    }
+    .miembro__info:hover .imagen-hover{
+    display: none; }
+
+    .miembro__info:hover {
+        display: none;
+
+    }
+
+    .nosotros_subtitle_equipo {
+        font-size: 20px;
+    }
+    .nosotros_text_equipo {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:430px){
+    .nosotros_texto-superior, .nosotros_texto-medio, .nosotros_texto-inferior {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        left: 10px;
+    }
+    .miembro__info {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .nosotros_texto-superior, .nosotros_texto-medio, .nosotros_texto-inferior {
+        font-size: .8rem;
+        margin: 0;
+        padding: 0;
+        left: 5px;
+    }
+}
+
 
 
