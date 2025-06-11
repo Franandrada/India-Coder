@@ -1,0 +1,44 @@
+// Variables
+
+$color-primario: #1f1f1f;
+$color-secundario:#ebeae8;
+$color-terciario: #48e;
+$color-text: #333;
+$color-bg: #ffffff;
+
+// Tipografia
+
+$font-base: "Arapey", serif;
+$font-size: 16px;
+$font-size-secundario: 50px;
+$font-size-terciario: 25px; 
+
+// breakpoints
+
+$breakpoints: (
+    'break-370': 370px,
+    'break-450': 450px,
+    'break-480': 480px,
+    'break-500': 500px,
+    'break-600': 600px,
+    'break-850':850px,
+    'break-900': 900px,
+    'break-1018': 1018px,
+    'break-1500': 1500px
+
+);
+
+@mixin respond($breakpoint, $type: min) {
+    @if map-has-key($breakpoints, $breakpoint) {
+    @media (#{$type}-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+    }
+    }
+}
+
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}

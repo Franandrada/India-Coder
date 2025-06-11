@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="../css/estilos.css">
     <title>India - Construcción & Renovación</title>
 </head>
 
@@ -29,9 +30,9 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="stack-container">
             <div class="servicios_container">
-                <div class="servicios_item">
+                <div class="servicios_item" data-aos="fade-up" data-aos-delay="0">
                     <img class="img_item_service" src="../img/cocina-con-silla-blanca.jpg">
                     <div class="container_item">
                         <h4 class="service_section_title">Reforma de cocina moderna</h4>
@@ -43,8 +44,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="servicios_item"><img class="img_item_service" src="../img/Jardines_Importantes.jpg">
-                    <div class="container_item">
+                <div class="servicios_item mid" data-aos="fade-up" data-aos-delay="150"><img class="img_item_service" src="../img/Jardines_Importantes.jpg">
+                    <div class="container_item mid">
                         <h4 class="service_section_title">Construcción de un camino de jardín exterior</h4>
                         <p class="service_section_text">Nuestro equipo diseñó y construyó un sendero de jardín duradero y visualmente atractivo para realzar el espacio exterior. Con materiales de primera calidad, creamos un camino continuo que se integra de forma natural con el paisaje, ofreciendo funcionalidad y encanto estético. El resultado es un sendero elegante y bien diseñado que realza el diseño general del jardín.</p>
                         <h5 class="service_section_subtitle">Testimonios</h5>
@@ -54,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="servicios_item mid"><img class="img_item_service" src="../img/baño123.jpg">
+                <div class="servicios_item" data-aos="fade-up" data-aos-delay="300"><img class="img_item_service" src="../img/baño123.jpg">
                     <div class="container_item">
                         <h4 class="service_section_title">Renovación del baño</h4>
                         <p class="service_section_text">Renovamos este baño con un diseño fresco y moderno, incorporando azulejos de alta gama, grifería elegante e iluminación eficiente. La distribución se optimizó para maximizar el espacio, creando un ambiente lujoso y relajante. El resultado final es un baño de diseño elegante que realza la comodidad y la funcionalidad.</p>
@@ -88,6 +89,35 @@
 
         </section>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+<!-- 👇 Pegá este justo después -->
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray(".servicios_item").forEach((card, index) => {
+    gsap.to(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top center+=100",
+        end: "bottom top",
+        scrub: true,
+        onEnter: () => card.style.zIndex = index + 2,
+        onLeaveBack: () => card.style.zIndex = index + 1,
+      }
+    });
+  });
+</script>
+
 
 </body>
 

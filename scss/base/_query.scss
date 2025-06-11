@@ -1,0 +1,229 @@
+// Aplicación del mixin `respond` con los nuevos breakpoints
+
+@include respond(break-900, max) {
+  .header_open-nav-button {
+    display: block !important;
+  }
+
+  .header_nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  #open-menu:checked ~ .header_nav {
+    display: flex;
+  }
+
+  .nav_left,
+  .nav_right {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav_left li,
+  .nav_right li {
+    margin: 10px 0;
+  }
+}
+
+@include respond(break-450, max) {
+  .hero {
+    section {
+      .img_contenedor {
+        padding: 0 10px;
+
+        img {
+          border-radius: 20px;
+        }
+      }
+
+      .title_img {
+        h3 {
+          font-size: 1.8rem !important;
+        }
+      }
+    }
+  }
+}
+
+@include respond(break-370, max) {
+  .hero {
+    section {
+      .img_contenedor {
+        padding: 0 5px;
+        margin-left: 20px;
+
+        img {
+          border-radius: 20px;
+        }
+      }
+
+      .title_img {
+        h3 {
+          font-size: 1.4rem !important;
+        }
+      }
+    }
+  }
+}
+
+@include respond(break-850, max) {
+  .section_about .about_container {
+    flex-direction: column;
+  }
+
+  .section_about .about_container .about_text {
+    font-size: 25px;
+  }
+
+  .section_about .about_container .about_description .text_right {
+    font-size: 14px;
+  }
+}
+
+@include respond(break-900, max) {
+  .small-carousel {
+    height: 400px;
+    max-width: 100%;
+    margin: 0 15px !important;
+  }
+
+  .text_container {
+    flex-direction: column !important;
+    gap: 40px;
+    margin-top: 40px;
+
+    .number {
+      font-size: 35px;
+    }
+  }
+}
+
+@include respond(break-480, max) {
+  .small-carousel {
+    height: 250px;
+  }
+
+  .text_container {
+    margin-top: 0;
+    .number {
+      font-size: 28px;
+    }
+
+    .text {
+      font-size: 14px;
+    }
+  }
+}
+
+@include respond(break-600, max) {
+  .questions_container {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
+
+@include respond(break-1500, max) {
+  .grid_galeria {
+    .columns {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+}
+
+@include respond(break-900, max) {
+  .grid_galeria {
+    .columns {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
+}
+
+@include respond(break-500, max) {
+  .grid_galeria {
+    .columns {
+      margin: 10px;
+      gap: 8px;
+    }
+
+    .img-item {
+      border-radius: 6px;
+    }
+  }
+}
+
+@include respond(break-900, max) {
+  .service_container {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
+
+@include respond(break-1500, max) {
+  .grid_galeria {
+    .columns {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+
+    .img-casa {
+      grid-column: span 2;
+    }
+  }
+}
+
+@include respond(break-900, max) {
+  .grid_galeria {
+    .columns {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .img-casa {
+      grid-column: auto;
+    }
+  }
+}
+
+@include respond(break-1018, max) {
+  .section_contact {
+    .contact_container {
+      flex-direction: column;
+      align-items: center;
+
+      .contact_text_container,
+      .form_container {
+        width: 100%;
+      }
+
+      .date_container {
+        align-items: center ;
+      }
+
+      .date_text {
+        display: flex;
+        flex-direction: column !important;
+      }
+
+      .form_container {
+        margin-top: 30px;
+      }
+    }
+  }
+}
