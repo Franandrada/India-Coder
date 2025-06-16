@@ -227,3 +227,89 @@
     }
   }
 }
+
+@include respond('break-850', max) {
+  .servicios_item {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    gap: 24px;
+    position: static; 
+    z-index: auto;  
+
+    figure,
+    .img_item_service {
+      width: 100%;
+      height: auto;
+      max-width: 90vw;
+    }
+
+    .container_item {
+      max-width: 100%;
+      padding: 0 1rem;
+      gap: 12px;
+
+      .service_section_title {
+        font-size: 28px;
+      }
+
+      .service_section_text,
+      .service_section_testimonio {
+        font-size: $font-size;
+      }
+
+      .service_section_subtitle {
+        font-size: $font-size-terciario;
+        margin-top: 12px;
+      }
+    }
+
+    .testimoni_person {
+      flex-direction: column;
+
+      img.img_item_testimonio {
+        margin: 0 0 8px 0;
+      }
+    }
+  }
+}
+
+@include respond('break-850', max) {
+  .stack-container {
+    height: auto !important; 
+  }
+
+  footer {
+    position: relative; 
+    z-index: 10; 
+  }
+}
+
+@include respond('break-850', max) {
+  .contenedor_total {
+
+  .nosotros_subtitle_equipo {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+
+  .nosotros_text_equipo {
+    font-size: 14px !important;
+  }
+  }
+
+}
+
+@include respond('break-450', max) {
+  .contenedor_total {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  .nosotros_container_all {
+    margin-bottom: 0;
+  }
+  } 
+}

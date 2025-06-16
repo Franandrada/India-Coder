@@ -90,7 +90,6 @@ header .header_checkbox {
 .hero section .img_contenedor {
   position: relative;
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -98,8 +97,7 @@ header .header_checkbox {
   height: auto;
   display: block;
   width: 100%;
-  border-radius: 30px;
-  margin: 10px auto;
+  margin: 0;
 }
 .hero section .img_contenedor .title_img h3 {
   position: absolute;
@@ -178,9 +176,9 @@ header .header_checkbox {
   min-height: 120vh;
 }
 .project_container .small-carousel {
-  max-width: 1000px;
-  height: 600px;
-  margin: 30px auto;
+  width: 98vw;
+  height: 100vh;
+  margin: 0 auto;
   overflow: hidden;
 }
 .project_container .small-carousel .carousel-inner,
@@ -192,7 +190,6 @@ header .header_checkbox {
   width: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
 }
 .project_container .img_items_container {
   display: flex;
@@ -205,7 +202,6 @@ header .header_checkbox {
   width: clamp(250px, 30vw, 400px);
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
   object-fit: cover;
   transition: all 0.3s ease;
 }
@@ -261,7 +257,6 @@ header .header_checkbox {
   width: 40%;
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
   object-fit: cover;
   margin-bottom: 2rem;
 }
@@ -1042,6 +1037,74 @@ footer .footer_item li a:hover {
   }
   .section_contact .contact_container .form_container {
     margin-top: 30px;
+  }
+}
+@media (max-width: 850px) {
+  .servicios_item {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    gap: 24px;
+    position: static;
+    z-index: auto;
+  }
+  .servicios_item figure,
+  .servicios_item .img_item_service {
+    width: 100%;
+    height: auto;
+    max-width: 90vw;
+  }
+  .servicios_item .container_item {
+    max-width: 100%;
+    padding: 0 1rem;
+    gap: 12px;
+  }
+  .servicios_item .container_item .service_section_title {
+    font-size: 28px;
+  }
+  .servicios_item .container_item .service_section_text,
+  .servicios_item .container_item .service_section_testimonio {
+    font-size: 16px;
+  }
+  .servicios_item .container_item .service_section_subtitle {
+    font-size: 25px;
+    margin-top: 12px;
+  }
+  .servicios_item .testimoni_person {
+    flex-direction: column;
+  }
+  .servicios_item .testimoni_person img.img_item_testimonio {
+    margin: 0 0 8px 0;
+  }
+}
+@media (max-width: 850px) {
+  .stack-container {
+    height: auto !important;
+  }
+  footer {
+    position: relative;
+    z-index: 10;
+  }
+}
+@media (max-width: 850px) {
+  .contenedor_total .nosotros_subtitle_equipo {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+  .contenedor_total .nosotros_text_equipo {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 450px) {
+  .contenedor_total {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .contenedor_total .nosotros_container_all {
+    margin-bottom: 0;
   }
 }
 

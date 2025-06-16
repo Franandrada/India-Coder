@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <meta name="description" content="Ofrecemos servicios de arquitectura, reformas, interiorismo y gestión de obra. En INDIA combinamos creatividad con eficiencia técnica.">
+<meta name="keywords" content="servicios de arquitectura, reformas, diseño de interiores, dirección de obra, estudio INDIA, construcción">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>India - Construcción & Renovación</title>
 </head>
@@ -33,35 +35,35 @@
         <section class="stack-container">
             <div class="servicios_container">
                 <div class="servicios_item" data-aos="fade-up" data-aos-delay="0">
-                    <img class="img_item_service" src="../img/cocina-con-silla-blanca.jpg">
+                    <img class="img_item_service" src="../img/cocina-con-silla-blanca.jpg" alt="cocina con sillas blancas">
                     <div class="container_item">
                         <h4 class="service_section_title">Reforma de cocina moderna</h4>
                         <p class="service_section_text">Esta transformación de la cocina aportó un diseño elegante y moderno, además de una mayor funcionalidad, a la casa de nuestro cliente. Instalamos muebles a medida, encimeras de alta calidad y electrodomésticos de última generación, creando un espacio elegante y práctico, perfecto para cocinar y recibir invitados. Cuidando cada detalle, entregamos una cocina que combina estética y funcionalidad.</p>
                         <h5 class="service_section_subtitle">Testimonios</h5>
                         <p class="service_section_testimonio">La reforma transformó por completo nuestra cocina, dejándola hermosa y muy funcional. La artesanía fue excepcional y el equipo fue profesional y comunicativo en todo momento. ¡Estamos encantados con el resultado!</p>
-                        <div class="testimoni_person"><img class="img_item_testimonio" src="../img/rostro1.jpg">
+                        <div class="testimoni_person"><img class="img_item_testimonio" src="../img/rostro1.jpg" alt="cliente satisfecho">
                             <p>Rachel Morgan</p>
                         </div>
                     </div>
                 </div>
-                <div class="servicios_item mid" data-aos="fade-up" data-aos-delay="150"><img class="img_item_service" src="../img/Jardines_Importantes.jpg">
+                <div class="servicios_item mid" data-aos="fade-up" data-aos-delay="150"><img class="img_item_service" src="../img/Jardines_Importantes.jpg" alt="jardin refaccionado">
                     <div class="container_item mid">
                         <h4 class="service_section_title">Construcción de un camino de jardín exterior</h4>
                         <p class="service_section_text">Nuestro equipo diseñó y construyó un sendero de jardín duradero y visualmente atractivo para realzar el espacio exterior. Con materiales de primera calidad, creamos un camino continuo que se integra de forma natural con el paisaje, ofreciendo funcionalidad y encanto estético. El resultado es un sendero elegante y bien diseñado que realza el diseño general del jardín.</p>
                         <h5 class="service_section_subtitle">Testimonios</h5>
                         <p class="service_section_testimonio">El equipo de India hizo un trabajo increíble en el camino de nuestro jardín. Es resistente, se ve fantástico y ha transformado por completo nuestro espacio exterior. Escucharon nuestra visión y nos entregaron exactamente lo que queríamos. ¡Los recomendamos ampliamente!</p>
-                        <div class="testimoni_person"><img class="img_item_testimonio" src="../img/rostro2.jpg">
+                        <div class="testimoni_person"><img class="img_item_testimonio" src="../img/rostro2.jpg" alt="cliente satisfecho">
                             <p>Laura Davies</p>
                         </div>
                     </div>
                 </div>
-                <div class="servicios_item" data-aos="fade-up" data-aos-delay="300"><img class="img_item_service" src="../img/baño123.jpg">
+                <div class="servicios_item" data-aos="fade-up" data-aos-delay="300"><img class="img_item_service" src="../img/baño123.jpg" alt="baño remodelado">
                     <div class="container_item">
                         <h4 class="service_section_title">Renovación del baño</h4>
                         <p class="service_section_text">Renovamos este baño con un diseño fresco y moderno, incorporando azulejos de alta gama, grifería elegante e iluminación eficiente. La distribución se optimizó para maximizar el espacio, creando un ambiente lujoso y relajante. El resultado final es un baño de diseño elegante que realza la comodidad y la funcionalidad.</p>
                         <h5 class="service_section_subtitle">Testimonios</h5>
                         <p class="service_section_testimonio">India transformó nuestro baño anticuado en un espacio moderno e impresionante. La calidad del trabajo fue excelente y el equipo fue increíblemente profesional de principio a fin. ¡Nos encanta nuestro nuevo baño y sin duda volveríamos a contratar a India!</p>
-                        <div class="testimoni_person"><img class="img_item_testimonio" src="../img/rostro3.jpg">
+                        <div class="testimoni_person"><img class="img_item_testimonio" src="../img/rostro3.jpg" alt="cliente satisfecho">
                             <p>Juan Smits</p>
                         </div>
                     </div>
@@ -89,10 +91,12 @@
 
         </section>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
     duration: 1000,
@@ -100,25 +104,65 @@
   });
 </script>
 
-<!-- 👇 Pegá este justo después -->
+
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.utils.toArray(".servicios_item").forEach((card, index) => {
-    gsap.to(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top center+=100",
-        end: "bottom top",
-        scrub: true,
-        onEnter: () => card.style.zIndex = index + 2,
-        onLeaveBack: () => card.style.zIndex = index + 1,
+  let scrollAnimations = [];
+
+  function initScrollAnimations() {
+    // Solo inicializa si ancho > 850px
+    if (window.innerWidth > 850) {
+      gsap.utils.toArray(".servicios_item").forEach((card, index) => {
+        const anim = gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top center+=100",
+            end: "bottom top",
+            scrub: true,
+            onEnter: () => card.style.zIndex = index + 2,
+            onLeaveBack: () => card.style.zIndex = index + 1,
+          }
+        });
+        scrollAnimations.push(anim);
+      });
+    }
+  }
+
+  function killScrollAnimations() {
+    scrollAnimations.forEach(anim => {
+      if (anim.scrollTrigger) {
+        anim.scrollTrigger.kill(true); // true: forzar destrucción completa
       }
+      anim.kill();
     });
-  });
+    scrollAnimations = [];
+  }
+
+
+  let lastWidth = window.innerWidth;
+
+  function handleResize() {
+    const currentWidth = window.innerWidth;
+
+    const crossedThreshold = 
+      (lastWidth > 850 && currentWidth <= 850) || 
+      (lastWidth <= 850 && currentWidth > 850);
+
+    if (crossedThreshold) {
+      killScrollAnimations();
+      initScrollAnimations();
+    }
+
+    lastWidth = currentWidth;
+  }
+
+  
+  initScrollAnimations();
+
+  
+  window.addEventListener("resize", handleResize);
 </script>
-
-
 </body>
 
 </html>
