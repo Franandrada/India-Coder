@@ -33,43 +33,7 @@
       z-index: 1;
     }
 
-    .nosotros_title_img {
-      @include flex-center;
-      flex-direction: column;
-      position: absolute;
-      color:$color-bg;
-      line-height: 1.1;
-      width: 100%;
-      z-index: 10;
-      margin: 30px;
-
-      .nosotros_texto-superior,
-      .nosotros_texto-medio,
-      .nosotros_texto-inferior {
-        margin: 10px;
-        padding: 10px;
-      }
-
-      .nosotros_texto-superior {
-        bottom: 200px;
-        left: 50px;
-        font-size: 80px;
-      }
-
-      .nosotros_texto-medio {
-        bottom: 150px;
-        left: 50px;
-        font-size: 80px;
-      }
-
-      .nosotros_texto-inferior {
-        bottom: 100px;
-        left: 50px;
-        font-size: 30px;
-      }
-    }
-  }
-}
+  }}
 
 .contenedor_total {
   @include flex-center;

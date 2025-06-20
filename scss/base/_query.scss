@@ -299,7 +299,7 @@
   .contenedor_total {
     display: flex !important;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
     
 
 
@@ -308,16 +308,16 @@
   }
 
   .nosotros_subtitle_equipo {
-    font-size: 15px !important;
+    font-size: 20px !important;
     font-weight: bold;
-    max-width: 100%;
     text-align: center;
+    margin-bottom: 0;
   }
 
   .nosotros_text_equipo {
-    font-size: 12px !important;
-    max-width: 100%;
+    font-size: 16px !important;
     text-align: center;
+    margin-top: 0;
   }
   }
 
